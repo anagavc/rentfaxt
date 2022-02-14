@@ -1,0 +1,44 @@
+<% layout('layouts/adminBoilerplate')%>
+<main>
+    <h3 class="secondary-heading mt-5">Services</h3>
+
+    <section class="services container mt-5">
+
+        <div class="service">
+            <% for( let service of services) { %>
+            <div class="service__information">
+                <div class="service__information-image">
+                    <img class="img-fluid" src="<%=service.serviceImage.url%>" alt="">
+                </div>
+                <div class="service__information-title">
+                    <%=service.serviceTitle%>
+                </div>
+                <div class="service__information-text mt-5">
+                    <p><%=service.serviceDescription%></p>
+                </div>
+
+                <div class="button-group">
+                    <a href="services/<%=service._id%>" class="card-button card-button__listing edit-button">Edit</a>
+                    <form action="services/<%=service._id%>?_method=DELETE" method="POST" class="card__form">
+                        <button class="card-button card-button__listing delete-button">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+            <% } %>
+
+
+
+            <div class="back-button u-margin-top-huge">
+                <a class="about-button back-button-btn" href="overview">Back</a>
+                <a class="about-button back-button-btn back-button-btn-new" href="createService">Create a new
+                    service</a>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+</main>

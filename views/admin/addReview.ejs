@@ -1,0 +1,44 @@
+<% layout('layouts/adminBoilerplate')%>
+
+<main>
+    <section class="container mt-5">
+        <h3 class="secondary-heading">Add new review</h3>
+
+        <div class="login mx-auto mt-5">
+            <form action="createReview" method="POST" enctype="multipart/form-data" novalidate class="validated-form">
+                <div class="login__details">
+                    <div class="login__username mt-5">
+                        <label for="image" class="">Upload the reviewer's avatar</label>
+                        <input class="form-control" type="file" name="reviewImage" placeholder="Choose file" id="image"
+                            required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="login__username">
+                        <label for="reviewerName" class="">Reviewer's name</label>
+                        <input type="text" placeholder="Reviewer's Name" name="reviewer" id="reviewerName" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="login__password">
+                        <label for="review">Review</label>
+                        <textarea class="form-control login__textarea" name="review" id="review" rows="6"
+                            required></textarea>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+
+
+                    <a href="../reviews" class="login__btn login__btn-save mx-auto">Cancel</a>
+                    <button class="login__btn login__btn-save ms-auto">Save</button>
+
+                </div>
+            </form>
+        </div>
+
+    </section>
+</main>

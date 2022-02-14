@@ -1,0 +1,81 @@
+.service {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media only screen and (max-width: $bp-small) {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__information {
+        background-color: #f9f7f6;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+        box-shadow: $box-shadow;
+        width: 35rem;
+        margin-bottom: 5rem;
+        @media only screen and (max-width: $bp-largest) {
+            margin-bottom: 2.5rem;
+        }
+        &-image {
+            width: 100%;
+            grid-column: 1 / -1;
+            grid-row: 1 / span 3;
+            z-index: 1;
+            &-user {
+                width: auto;
+                justify-content: center;
+                margin: 4.5rem;
+                svg {
+                    fill: $color-primary;
+                }
+            }
+        }
+        &-title {
+            grid-row: 2 / span 2;
+            grid-column: 1/-1;
+            background-color: $color-primary;
+            font-size: 1.8rem;
+            z-index: 2;
+            color: $color-white;
+            text-align: center;
+            transform: translateY(50%);
+            width: 80%;
+            align-self: end;
+            justify-self: center;
+            padding: 1.2rem;
+            &-user {
+                background-color: transparent;
+                font-style: $heading-font;
+                font-size: 2.5rem;
+                color: $color-primary;
+            }
+        }
+        &-text {
+            grid-column: 1 / -1;
+            padding: 0 3rem;
+            text-align: left;
+            font-size: 1.4rem;
+            color: $color-grey-dark-3;
+        }
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-wrap: wrap;
+            color: $color-primary;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            row-gap: 1.5rem;
+        }
+        &-button {
+            justify-self: center;
+            grid-column: 1/-1;
+            grid-row: 6 / span 3;
+            padding: 2rem;
+        }
+    }
+    &-user {
+        margin-top: 10rem;
+    }
+}

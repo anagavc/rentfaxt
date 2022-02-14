@@ -1,0 +1,73 @@
+<% layout('layouts/adminBoilerplate')%>
+
+<h3 class="secondary-heading mt-5">Your listings</h3>
+
+<section class="container u-margin-top-big">
+
+    <div class="service service__listing mt-5">
+        <% for( let listing of listings ) { %>
+        <div class="service__information">
+            <div class="service__information-image">
+                <img class="img-fluid" src="<%= listing.listingImage.url %>" alt="">
+            </div>
+            <div class="service__information-text service__information-content row">
+
+                <div class="service__information-name">
+                    <p>
+                        <img src="https://img.icons8.com/material-outlined/24/237a57/tag-window.png" />
+
+                        <%= listing.title %>
+                    </p>
+                </div>
+                <div class="service__information-location">
+                    <p>
+                        <img src="https://img.icons8.com/windows/30/237a57/category.png" />
+                        <%= listing.type %>
+
+                    </p>
+                </div>
+                <div class="service__information-location">
+                    <p>
+                        <img src="https://img.icons8.com/material/24/237a57/worldwide-location--v1.png" />
+
+                        <%= listing.location %>
+
+                    </p>
+                </div>
+                <div class="service__information-realtor">
+                    <p>
+                        <img src="https://img.icons8.com/material-outlined/24/237a57/user--v1.png" />
+
+                        <%= listing.realtor%>
+
+                    </p>
+                </div>
+                <div class="service__information-price">
+                    <p>
+                        <img src="https://img.icons8.com/material-outlined/24/237a57/us-dollar-circled--v1.png" />
+                        <%= listing.price %>
+                    </p>
+                </div>
+            </div>
+            <div class="button-group">
+
+                <a class="card-button card-button__listing edit-button" href="listings/<%= listing._id %>">Edit</a>
+                <form action="listings/<%= listing._id %>?_method=DELETE" method="POST" class="card__form">
+                    <button class="card-button card-button__listing delete-button">Delete</button>
+                </form>
+            </div>
+
+        </div>
+        <% } %>
+
+
+
+        <div class="back-button u-margin-top-huge">
+            <a class="about-button back-button-btn" href="overview">Back</a>
+            <a class="about-button back-button-btn back-button-btn-new" href="createListing">Create a new listing</a>
+
+        </div>
+
+    </div>
+
+</section>

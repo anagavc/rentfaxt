@@ -1,0 +1,30 @@
+<% layout('layouts/adminBoilerplate')%>
+
+<section class="container admin-review mt-5">
+    <% for( let review of reviews ) { %>
+
+    <div class="review__information review__information-admin">
+        <img src="<%=review.reviewImage.url%>" alt="<%=review.reviewer%>" class="img-fluid review__avatar img-rounded">
+        <div class="review__information-name mx-2">
+            <%=review.reviewer%>
+        </div>
+        <div class="review__information-comment">
+            <%=review.review%>
+        </div>
+        <div class="button-group button-group__review">
+            <a class="card-button card-button__listing edit-button" href="reviews/<%=review._id%> ">Edit</a>
+            <form action="reviews/<%=review._id%>?_method=DELETE" method="POST" class="card__form">
+                <button class="card-button card-button__listing delete-button">Delete</button>
+            </form>
+        </div>
+    </div>
+    <% } %>
+
+
+
+</section>
+<div class="back-button u-margin-top-huge">
+    <a class="about-button back-button-btn" href="overview">Back</a>
+    <a class="about-button back-button-btn back-button-btn-new" href="createReview">Create a new review</a>
+
+</div>

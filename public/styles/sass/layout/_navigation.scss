@@ -1,0 +1,58 @@
+.navigation {
+    font-family: $heading-font;
+    background-color: $color-primary;
+    font-size: 1.7rem;
+    display: flex;
+    align-content: center;
+    &__logo {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-white;
+        transition: all 0.5s;
+        &:hover {
+            color: $color-secondary;
+        }
+        &-footer {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    &-link {
+        font-family: $body-font;
+        text-decoration: none;
+        padding: 1rem;
+        color: $color-white;
+        transition: all 0.5s;
+        &:hover,
+        &:active {
+            color: $color-secondary;
+        }
+        &-btn {
+            &:hover,
+            &:active {
+                background-color: $color-secondary;
+                color: $color-white;
+                // border-bottom: 0.5rem solid $color-secondary;
+            }
+        }
+    }
+    &__btn {
+        border: none;
+        border-radius: 0.2rem;
+        padding: 0.25rem 1rem;
+        margin-top: -2rem;
+        margin-left: 0.5rem;
+        margin-right: 2.5rem;
+        text-transform: uppercase;
+        font-family: $body-font;
+        color: $color-primary;
+        background-color: $color-white;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+    }
+}

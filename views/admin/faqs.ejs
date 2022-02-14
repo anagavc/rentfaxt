@@ -1,0 +1,49 @@
+<% layout('layouts/adminBoilerplate')%>
+
+<h3 class="secondary-heading mt-5">FAQS</h3>
+
+<section class="container faq mt-5">
+
+    <% for( let faq of faqs) { %>
+    <div class="faq__container mb-3">
+        <div class="card-body">
+            <div class="accordion accordion-flush" id="faq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed faqs__header" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#accordion<%=faq._id%>" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                            <%=faq.question%>
+
+                        </button>
+                    </h2>
+                    <div id="accordion<%=faq._id%>" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingOne" data-bs-parent="#faq">
+                        <div class="accordion-body"><%=faq.answer%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-group">
+                <a class="card-button card-button__listing edit-button" href="faq/<%=faq._id%>">Edit</a>
+                <form action="faq/<%=faq._id%>?_method=DELETE" method="POST" class="card__form">
+                    <button class="card-button card-button__listing delete-button">Delete</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <% } %>
+
+
+
+
+
+
+</section>
+<div class="back-button u-margin-top-huge">
+    <a class="about-button back-button-btn" href="overview">Back</a>
+    <a class="about-button back-button-btn back-button-btn-new" href="createFAQ">Create a new FAQ</a>
+
+</div>

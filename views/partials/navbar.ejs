@@ -1,0 +1,46 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand navigation__logo" href="#">RENTFAXT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto navigation__right">
+                <li class="nav-item">
+                    <a class="navigation-link active" aria-current="page" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="navigation-link" href="/#about">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navigation-link" href="/#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navigation-link" href="/#reviews">Reviews</a>
+                </li>
+                <% if (!currentUser) { %>
+                <li class="nav-item">
+                    <a class="navigation-link navigation-link-btn
+                        " href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navigation-link navigation-link-btn
+                        " href="/login">Login</a>
+                </li>
+                <% } else { %>
+                <li class="nav-item">
+                    <a class="navigation-link navigation-link-btn" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navigation-link navigation-link-btn" href="/logout">Logout</a>
+                </li>
+                <% } %>
+            </ul>
+
+
+        </div>
+    </div>
+</nav>

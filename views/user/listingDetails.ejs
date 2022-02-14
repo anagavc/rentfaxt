@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate')%>
+
+<section class="container  u-margin-top-big">
+    <h3 class="secondary-heading">Listing Details</h3>
+    <div class="listings mt-5">
+        <div class="listings__left">
+            <img src="<%= listing.listingImage.url %>" alt="" class="img-fluid">
+            <div class="mt-5">
+                <a class="about-button about-button-listing u-margin-top-big" href="/">Back</a>
+            </div>
+        </div>
+
+        <div class="listings__right">
+            <div class="listings__right-map" id="map">
+               
+            </div>
+            <div class="listings__right-details">
+                <p class="list__title"> <img
+                        src="https://img.icons8.com/material-outlined/24/237a57/tag-window.png" /><%= listing.title%>
+                </p>
+                <p class="list__title"> <img
+                        src="https://img.icons8.com/material/24/237a57/worldwide-location--v1.png" /><%= listing.location %>
+                </p>
+                <p class="list__title"><img
+                        src="https://img.icons8.com/material-outlined/24/237a57/us-dollar-circled--v1.png" /><%= listing.price %>
+                </p>
+                <p class="list__title"><img
+                        src="https://img.icons8.com/material-outlined/24/237a57/create-new.png" /><%= listing.description %>
+                </p>
+
+                <a href="mailto:<%=listing.email%>" class="listings-button mt-5">Contact the Realtor</a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const listing = <%-JSON.stringify(listing)%>;
+</script>
+<script src="/js/showPageMap.js"></script>

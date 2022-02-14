@@ -1,0 +1,33 @@
+.about {
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0 5rem;
+    }
+    &__information {
+        display: flex;
+        @media only screen and (max-width: $bp-largest) {
+            flex-direction: column;
+        }
+        &-right {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            @media only screen and (max-width: $bp-largest) {
+                flex: 1;
+                margin-bottom: 2.5rem;
+            }
+        }
+        &-left {
+            flex-basis: 50%;
+            margin-left: 5rem;
+            @media only screen and (max-width: $bp-largest) {
+                margin-left: 0;
+                flex: 1;
+            }
+        }
+    }
+    &-image {
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: $box-shadow;
+    }
+}

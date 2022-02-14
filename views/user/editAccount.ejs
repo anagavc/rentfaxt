@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate')%>
+
+<section class="container  u-margin-top-big">
+    <h3 class="secondary-heading">Edit account</h3>
+
+    <div class="login mx-auto mt-5">
+        <form action="<%=users%>?_method=PUT" method="POST" novalidate class="validated-form">
+            <div class="login__details">
+                <div class="login__username mt-5">
+                    <label for="email" class="">Enter your email address</label>
+                    <input type="email" placeholder="Email address" value="<%= users.email %>" name="email" id="email"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="mobile-num" class="">Enter your mobile number</label>
+                    <input type="tel" placeholder="Mobile Number" value="<%= users.mobile %>" name="mobile"
+                        id="mobile-num" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="username" class="">Enter your username</label>
+                    <input type="text" placeholder="Username" value="<%= users.username %>" name="username"
+                        id="username" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+
+
+                <a href="../dashboard" class="login__btn login__btn-save cancel mx-auto">Cancel</a>
+                <button class="login__btn login__btn-save ms-auto">Save</button>
+
+            </div>
+        </form>
+    </div>
+
+</section>

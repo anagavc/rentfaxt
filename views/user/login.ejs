@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate')%>
+<section class="container  u-margin-top-big">
+    <div class="login mx-auto">
+        <div class="login__title">
+            <h3 class="login__heading"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                    <path
+                        d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                    <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>Login</h3>
+        </div>
+        <form action="login" method="post" novalidate class="validated-form">
+            <div class="login__details">
+
+                <div class="login__username">
+                    <label for="username" class="">Enter your username</label>
+                    <input class="form-control" type="text" placeholder="Username" name="username" id="username"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid username.
+                    </div>
+                </div>
+
+                <div class="login__password">
+                    <label for="password">Enter your password</label>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid password.
+                    </div>
+                </div>
+
+
+
+                <a href="/" class="login__btn login__btn-save mx-auto">Back to home</a>
+
+                <button class="login__btn"> Login</button>
+
+            </div>
+        </form>
+        <p class="login__paragraph">Don't have an account yet? <a href="register">Create an account</a>
+        </p>
+    </div>
+    </div>
+</section>

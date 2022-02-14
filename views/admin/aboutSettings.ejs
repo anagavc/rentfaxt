@@ -1,0 +1,34 @@
+<% layout('layouts/adminBoilerplate')%>
+
+<section class="container  u-margin-top-big">
+    <h3 class="secondary-heading">About Settings</h3>
+
+    <div class="login mx-auto mt-5">
+        <div class="login__details">
+            <form action="aboutPageSettings" method="POST" enctype="multipart/form-data" novalidate
+                class="validated-form">
+                <div class="login__username mt-5">
+                    <label for="aboutImage" class="">About Image</label>
+                    <input class="form-control" name="aboutImage" type="file" placeholder="Choose file" id="aboutImage"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="login__password">
+                    <label for="aboutText">About</label>
+                    <textarea class="form-control login__textarea" name="aboutText" id="aboutText" rows="6"
+                        required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <a href="overview" class="login__btn login__btn-save mx-auto">Cancel</a>
+                <button class="login__btn login__btn-save ms-auto">Save</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>

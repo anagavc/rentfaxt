@@ -1,0 +1,141 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+        width: 80%;
+    }
+    &__title {
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    &__heading {
+        color: $color-primary;
+        font-size: 2rem;
+        font-weight: 600;
+        // text-transform: uppercase;
+        font-style: $heading-font;
+        svg {
+            height: 3rem;
+            width: 3rem;
+            margin-right: 0.5rem;
+        }
+    }
+    &__details {
+        label {
+            font-size: 1.5rem;
+            color: $color-primary;
+            // display: block;
+            margin-bottom: 0.5rem;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border: none;
+            border-radius: 0.2rem;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            background-color: rgba($color-secondary, 0.1);
+            transition: $primary-transition;
+            &:active,
+            &:focus {
+                outline: none;
+                border-bottom: 0.2rem solid $color-primary;
+            }
+            &::-webkit-input-placeholder {
+                font-size: 1.5rem;
+                color: $color-grey-dark-2;
+            }
+        }
+    }
+
+    &__btn {
+        border: none;
+        background-color: $color-primary;
+        border-radius: 0.2rem;
+        padding: 0.5rem 1rem;
+        color: $color-white;
+        width: 100%;
+        justify-self: center;
+        font-size: 1.6rem;
+        margin: 2rem 0;
+        transition: $primary-transition;
+        &:hover,
+        &:active {
+            background-color: $color-secondary;
+        }
+        &-save {
+            margin-top: 1rem;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        a {
+            color: $color-primary;
+            transition: $primary-transition;
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+    &__textarea {
+        background-color: rgba($color-secondary, 0.1);
+        border: none;
+        font-size: 1.5rem;
+        &:active,
+        &:focus {
+            outline: 2px solid rgba($color-primary, 0.5);
+            box-shadow: $box-shadow-2;
+        }
+        &::-webkit-input-placeholder {
+            font-size: 1.5rem;
+            color: $color-grey-dark-2;
+        }
+    }
+    &__select {
+        width: 100%;
+
+        margin-bottom: 1.5rem;
+        border: none;
+        border-radius: 0.2rem;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        background-color: rgba($color-secondary, 0.1);
+        transition: $primary-transition;
+        &:active,
+        &:focus {
+            outline: 2px solid rgba($color-primary, 0.5);
+            box-shadow: $box-shadow-2;
+        }
+        &::-webkit-input-placeholder {
+            font-size: 1.5rem;
+            color: $color-grey-dark-2;
+        }
+    }
+    a {
+        background-color: transparent;
+        color: $color-primary;
+        margin-bottom: 0;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        &:active,
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.invalid-feedback,
+.valid-feedback {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}

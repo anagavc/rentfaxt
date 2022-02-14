@@ -1,0 +1,105 @@
+body {
+    font-family: $body-font, sans-serif;
+    font-weight: 400;
+    /* font-size:16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+.heading {
+    text-align: center;
+    color: $color-grey-light-2;
+    text-transform: uppercase;
+    display: block;
+    &-top {
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 1.5rem;
+        animation: downMovement 1s ease-out;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3rem;
+        }
+    }
+    &-bottom {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+        animation: upMovement 1s ease-out;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-bottom:before {
+        content: "\A";
+        white-space: pre;
+    }
+}
+
+.title {
+    color: $color-primary;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    animation: downMovement 1s ease-out;
+    &-review {
+        color: $color-white;
+    }
+    &-sub {
+        font-weight: 200;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        &__review {
+            color: $color-white;
+        }
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.right-text {
+    font-size: 1.6rem;
+    color: $color-grey-dark-3;
+    text-align: justify;
+    &-footer {
+        color: $color-white;
+    }
+}
+
+.footer__heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-white;
+}
+
+.secondary-heading {
+    font-weight: 600;
+    font-size: 2rem;
+    color: $color-primary;
+    margin-left: 2rem;
+}
+
+.list__title {
+    font-size: 2rem;
+    color: $color-primary;
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+    // padding: 0.5rem 3rem;
+
+    img {
+        margin-right: 1.5rem;
+    }
+}
+
+.user {
+    &__paragraph {
+        text-align: center;
+        font-size: 2rem;
+        color: $color-grey-dark;
+    }
+}
+
+.flash {
+    font-size: 1.5rem;
+}

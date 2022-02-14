@@ -1,0 +1,35 @@
+<% layout('layouts/adminBoilerplate')%>
+<section class="container  u-margin-top-big">
+    <h3 class="secondary-heading">Create new FAQ</h3>
+
+    <div class="login mx-auto mt-5">
+        <form action="createFAQ" method="POST" novalidate class="validated-form">
+            <div class="login__details mt-5">
+                <div class="login__username">
+                    <label for="faq" class="">Enter the frequently asked question</label>
+                    <input type="text" placeholder="FAQ" name="question" id="faq" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+
+                <div class="login__password">
+                    <label for="answer">Answer</label>
+                    <textarea class="form-control login__textarea" id="answer" rows="6" name="answer"
+                        required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+
+
+                <a href="faq" class="login__btn login__btn-save mx-auto">Cancel</a>
+                <button class="login__btn login__btn-save ms-auto">Save</button>
+
+            </div>
+        </form>
+    </div>
+
+</section>

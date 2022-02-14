@@ -1,0 +1,59 @@
+<% layout('layouts/adminBoilerplate')%>
+
+<section class="container  u-margin-top-big">
+    <h3 class="secondary-heading">Website Settings</h3>
+
+    <div class="login mx-auto mt-5">
+        <div class="login__details">
+            <form action="websiteSettings" method="POST" enctype="multipart/form-data" novalidate
+                class="validated-form">
+                <div class="login__username mt-5">
+                    <label for="favicon" class="">Favicon</label>
+                    <input class="form-control" name="favicon" type="file" placeholder="Choose file" id="favicon"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="login__username">
+                    <label for="webtitle" class="">Website's title</label>
+                    <input type="text" placeholder="Website's title" name="title" id="webtitle" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="fblink" class="">Facebook link</label>
+                    <input type="text" placeholder="Facebook link" name="fblink" id="fblink" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="iglink" class="">Instagram Link</label>
+                    <input type="text" placeholder="Instagram Link" name="iglink" id="iglink" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="linkedinlink" class="">LinkedIn Link</label>
+                    <input type="text" placeholder="LinkedIn link" name="linkedinlink" id="linkedinlink" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+
+
+
+
+
+                <a class="login__btn login__btn-save ms-auto">Cancel</a>
+                <button class="login__btn login__btn-save ms-auto">Save</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>

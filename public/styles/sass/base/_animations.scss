@@ -1,0 +1,37 @@
+/* animation for the header h1s */
+@keyframes downMovement {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    80% {
+        transform: translateY(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes upMovement {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+    }
+    80% {
+        transform: translateY(20rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

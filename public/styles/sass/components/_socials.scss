@@ -1,0 +1,32 @@
+.socials {
+    margin: 2rem 0;
+    &__links {
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+    }
+    a {
+        color: $color-white;
+        transition: $primary-transition;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    &-about {
+        a {
+            color: $color-primary;
+            transition: $primary-transition;
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+        svg {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}

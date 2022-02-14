@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate')%>
+
+<section class="container  u-margin-top-big">
+    <h3 class="secondary-heading">Edit listing</h3>
+
+    <div class="login mx-auto mt-5">
+        <form action="<%=listing._id%>?_method=PUT" method="POST" enctype="multipart/form-data" novalidate
+            class="validated-form">
+            <div class="login__details">
+                <div class="login__username mt-5">
+                    <label for="type" class="">Type of listing</label>
+                    <select class="form-select login__select" name="type" id="type" required>
+                        <option value="brokerage">Brokerage</option>
+                        <option value="landSales">Land Sales</option>
+                        <option value="propertyManagement">Property Management</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="title" class="">Enter the title of the listing</label>
+                    <input type="text" placeholder="Title" value="<%=listing.title%>" name="title" id="title" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="image" class="">Image</label>
+                    <input class="form-control" name="listingImage" type="file" placeholder="Choose file" id="image">
+
+                </div>
+                <div class="login__username">
+                    <label for="location" class="">Enter the location of the property</label>
+                    <input type="text" placeholder="Location" value="<%=listing.location%>" name="location"
+                        id="location" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="login__username">
+                    <label for="price" class="">Enter the price</label>
+                    <input type="text" placeholder="Price" value="<%=listing.price%>" name="price" id="price" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="login__password">
+                    <label for="description">Description</label>
+                    <textarea class="form-control login__textarea" name="description" required
+                        id="exampleFormControlTextarea1" rows="6"> <%=listing.description%></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+
+
+                <a href="../userListings" class="login__btn login__btn-save mx-auto">Cancel</a>
+                <button class="login__btn login__btn-save ms-auto">Save</button>
+
+            </div>
+        </form>
+    </div>
+
+</section>

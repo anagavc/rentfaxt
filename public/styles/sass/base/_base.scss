@@ -1,0 +1,21 @@
+/* the universal selector allows one start clean without any interferences from the browser */
+*,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    //this defines what one rem is
+    font-size: 62.5%; //1rem = 10px
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
+}
+body {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
