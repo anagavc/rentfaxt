@@ -1,0 +1,7 @@
+CLOUDINARY_CLOUD_NAME=yourCloudinaryCloudName
+CLOUDINARY_KEY=yourCloudinaryKey
+CLOUDINARY_SECRET=yourCloudinarySecret
+DB_URL=yourMongodBUrl
+MAPBOX_TOKEN=maboxToken
+SECRET=secretkeyforsession
+
