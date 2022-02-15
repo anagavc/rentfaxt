@@ -1,6 +1,6 @@
 
 # Rentfaxt
-`This is a dynamic NodeJS and Mongo DB based web application with a user and admin interfaces for a real estate listing firm, the goal of the application is to enable users/realtor signup and list their available real estate for interested propsective clients, there are different categories for real estate which include Rentals, Land Sales and Property Management.After listing the real estate with the relevant information,they are able to get the prospective clients to call them. The administrator of the web application has the ability to upload rentals as weel and alos delete rentals that do not meet the required standards. For each added property, a map is automatically generated for it using Mapbox's map api, SCSS is used as the css preprocessor thereby allowing for an easier management of the web application's css files,Cloudinary is used for management of image uploads and PassportJS for the authentication of users and adminstrators`
+`This is a dynamic NodeJS and Mongo DB based web application with a user and admin interfaces for a real estate listing firm, the goal of the application is to enable users/realtor signup and list their available real estate for interested prospective clients, there are different categories for real estate which include Rentals, Land Sales and Property Management.After listing the real estate with the relevant information,they are able to get the prospective clients to call them. The administrator of the web application has the ability to upload rentals as weel and alos delete rentals that do not meet the required standards. For each added property, a map is automatically generated for it using Mapbox's map api, SCSS is used as the css preprocessor thereby allowing for an easier management of the web application's css files,Cloudinary is used for management of image uploads and PassportJS for the authentication of users and adminstrators`
 ## Demo
 
 `The link to the live website:`
@@ -64,7 +64,7 @@ SECRET = any_secret_key_of_your_choice
 
 ![Hero Section](https://i2.paste.pics/G12EK.png)
 
-`The ServicesSection`
+`The Services Section`
 ![Gallery Section](https://i2.paste.pics/G12GN.png)
 
 `The Registration Page`
